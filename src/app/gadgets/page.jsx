@@ -73,7 +73,10 @@ const Gadgets = async () => {
                   <span className="text-xl font-bold text-indigo-600">
                     ${item.price}
                   </span>
-                  <Link href="/" className="px-3 py-1.5 text-sm rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  <Link
+                    href={`/gadgets/${item.id}`}
+                    className="px-3 py-1.5 text-sm rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition"
+                  >
                     View
                   </Link>
                 </div>
