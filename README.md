@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GadgetMart
 
-## Getting Started
+## Short Project Description
 
-First, run the development server:
+GadgetMart is a simple e-commerce style web application built using **Next.js (App Router)** and **Tailwind CSS**.  
+It displays a list of gadgets and electronics fetched from a local JSON file (`public/products.json`). Users can view product details on a separate page.
+
+---
+
+## Setup & Installation Instructions
+
+1. **Clone the repository**
 
 ```bash
+git clone <repository-url>
+cd gadgetmart
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Open the app
+Visit http://localhost:3000/items
+ in your browser
+
+Folder Structure
+ app/
+ ├─ items/
+ │   ├─ page.jsx           ← Product list page
+ │   └─ [id]/
+ │       └─ page.jsx       ← Product details page
+public/
+ ├─ products.json          ← Product data
+ └─ images/
+     ├─ iphone.jpg
+     ├─ macbook.jpg
+     ├─ samsung.jpg
+     └─ ...other images
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Route Summary
+Route Description
+/gadget Displays all products in a grid layout
+/gadget/[id] Displays detailed page for a specific product
+/ Optional landing/home page
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+List of Implemented Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Product list page with responsive grid layout
 
-## Learn More
+Dynamic product details page
 
-To learn more about Next.js, take a look at the following resources:
+Responsive design using Tailwind CSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Optimized product images using Next.js <Image> component
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Empty state handling if no products exist
 
-## Deploy on Vercel
+Professional card hover effects with shadow and transition
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Fetching product data from local JSON file (public/products.json)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Brief Explanation of Features
+
+Product List Page (/items)
+
+Shows all products in a responsive grid.
+
+Each card includes: Image, Name, Description, Price, and a "View" button.
+
+Hover effects highlight the card.
+
+Dynamic Product Details Page (/items/[id])
+
+Clicking "View" opens a dynamic page for the selected product.
+
+Displays: Image, Name, Description, Price, and "Add to Cart" button.
+
+Responsive Design
+
+Fully responsive for mobile, tablet, and desktop screens using Tailwind CSS.
+
+Image Optimization
+
+Images served using Next.js <Image> component for faster loading and better performance.
+
+Empty State Handling
+
+If no products exist in products.json, a friendly message is displayed.
+
+Professional UI Enhancements
+
+Cards have rounded corners, shadows, and smooth hover transitions for a modern look.
