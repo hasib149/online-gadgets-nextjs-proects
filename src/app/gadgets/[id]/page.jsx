@@ -9,7 +9,7 @@ async function getProducts() {
   return res.json();
 }
 const GadgetsDatails = async ({ params }) => {
-  const { id } = params; // id from URL
+  const { id } = await params; // id from URL
   const products = await getProducts();
   const product = products.find((p) => p.id === parseInt(id));
 
